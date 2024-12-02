@@ -1,15 +1,24 @@
-<app-navbar [navLight]="true" [navRight]="true"/>
+<!-- <app-navbar [navLight]="true" [navRight]="true"/> -->
 
  <!-- Start -->
- <section class="bg-half-260 bg-animation-left d-table w-100" style="background: url('assets/images/bg/events.jpg') center;">
+ <section class="bg-animation-left d-table w-100" style="background: url('assets/images/expo/portrait-bg.jpg') center no-repeat; background-size: cover; position: relative; padding: 5em;">
     <!-- <div class="bg-overlay bg-primary opacity-7"></div> -->
     <div class="container">
         <div class="row mt-5">
             <div class="col-12">
                 <div class="title-heading position-relative" style="z-index: 2;">
-                    <h4 class="heading fw-semibold text-white title-dark mb-4">Advancing <br> Research 2021</h4>
-                    <p class="text-white-50 para-desc">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
-                    
+                    <img src="assets/images/expo/logo-expo.png" class="logo"/>
+                    <div class="info">
+                        Descubre innovaciones, conferencias y oportunidades de networking en el evento clave del sector.
+                        <br>
+                        <span>
+                            <svg fill="#fff" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645 c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645 C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892 c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z"></path> <path d="M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614 c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901 c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104 C179.265,127.948,165.464,141.901,148.5,141.901z"></path> </g> </g></svg>
+                            &nbsp;
+                            Centro de convenciones del Estado de México.
+                        </span>
+                    </div>
+                    <img src="assets/images/expo/date-info.png"/>
+
                     <div class="row">
                         <div class="col-md-12">
                             <div id="event-sale">
@@ -24,16 +33,23 @@
                         </div>
                     </div>
 
-                    <div class="mt-4 pt-2">
-                        <a [routerLink]="[]" class="btn btn-primary">Register now</a>
-                    </div>
-                    
+                    <!-- <div class="mt-4 pt-2">
+                        <a [routerLink]="[]" class="btn btn-primary">ASEGURA TU LUGAR AQUÍ</a>
+                    </div> -->
+
+                    <button type="button" class="btn btn-primary" (click)="navigateToRegistry()">ASEGURA TU LUGAR AQUÍ</button>
+
                 </div>
             </div><!--end col-->
         </div><!--end row-->
     </div><!--end container-->
 </section><!--end section-->
 <!-- End -->
+
+
+<app-sponsors-line></app-sponsors-line>
+<!-- <app-crypto-tagline/> -->
+
 
  <!-- Start -->
  <section class="section">
@@ -114,7 +130,7 @@
 
 
 <section>
-    <div class="container mt-100 mt-60">
+    <div class="container mt-100 mt-60" id="formSection">
         <div class="row align-items-center">
             <div class="col-lg-7 col-md-6">
                 <div class="card border-0">
@@ -127,51 +143,71 @@
             <div class="col-lg-5 col-md-6 pt-2 pt-sm-0">
                 <div class="card bg-white shadow rounded border-0">
                     <div class="card-body">
-                        <h4 class="card-title">Get In Touch !</h4>
+                        <h4 class="card-title">¡Regístrate ahora!</h4>
                         <div class="custom-form mt-4">
-                            <form>
+                            <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="mb-3">
-                                            <label class="form-label">Your Name <span class="text-danger">*</span></label>
-                                            <input name="name" id="name" type="text" class="form-control" placeholder="Name :">
+                                            <label class="form-label">Nombre de la empresa<span class="text-danger">*</span></label>
+                                            <!-- <input name="name" id="name" type="text" class="form-control" placeholder="Empresa :"> -->
+                                            <input class="form-control" id="empresa" name="empresa" [(ngModel)]="formData.empresa" required />
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="mb-3">
-                                            <label class="form-label">Your Email <span class="text-danger">*</span></label>
-                                            <input name="email" id="email" type="email" class="form-control" placeholder="Email :">
+                                            <label class="form-label">Persona de contacto<span class="text-danger">*</span></label>
+                                            <!-- <input name="name" id="name" type="text" class="form-control" placeholder="Nombre contacto :"> -->
+                                            <input class="form-control" id="contacto" name="contacto" [(ngModel)]="formData.contacto" required />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Teléfono<span class="text-danger">*</span></label>
+                                            <!-- <input name="subject" id="subject" class="form-control" placeholder="Teléfono :"> -->
+                                            <input class="form-control" id="telefono" name="telefono" [(ngModel)]="formData.telefono" required />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Correo electrónico <span class="text-danger">*</span></label>
+                                            <!-- <input name="email" id="email" type="email" class="form-control" placeholder="Correo electrónico :"> -->
+                                            <input class="form-control" id="email" name="email" [(ngModel)]="formData.email" required />
                                         </div> 
-                                    </div><!--end col-->
-
-                                    <div class="col-12">
-                                        <div class="mb-3">
-                                            <label class="form-label">Subject</label>
-                                            <input name="subject" id="subject" class="form-control" placeholder="Subject :">
-                                        </div>
-                                    </div><!--end col-->
-
-                                    <div class="col-12">
-                                        <div class="mb-3">
-                                            <label class="form-label">Comments <span class="text-danger">*</span></label>
-                                            <textarea name="comments" id="comments" rows="3" class="form-control" placeholder="Message :"></textarea>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="d-grid">
-                                            <button type="submit" id="submit" name="send" class="btn btn-primary">Send Message</button>
+                                        <div class="d-grid" *ngIf="!loading">
+                                            <button type="submit"  class="btn btn-primary" [disabled]="!contactForm.form.valid">Enviar</button>                                            
                                         </div>
-                                    </div><!--end col-->
-                                </div><!--end row-->
+                                        <div class="contain-load" *ngIf="loading">
+                                            <div class="loader"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </form>
-                        </div><!--end custom-form-->
+                        </div>
                     </div>
                 </div>
             </div><!--end col-->
-        </div><!--end row-->
+        </div>
+    </div>
+    <div class="toast-container position-fixed top-0 end-0 p-3" id="toast-container">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" [ngClass]="{ 'show': showToast }"
+            *ngIf="showToast">
+            <div class="toast-header">
+                <strong class="me-auto">{{ toastTitle }}</strong>
+                <button type="button" class="btn-close" aria-label="Close" (click)="hideToast()"></button>
+            </div>
+            <div class="toast-body">
+                {{ toastMessage }}
+            </div>
+        </div>
     </div>
 </section>
 

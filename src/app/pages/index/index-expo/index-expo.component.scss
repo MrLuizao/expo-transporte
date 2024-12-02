@@ -1,0 +1,48 @@
+img.logo{
+    width: 70%;
+}
+
+div.info{
+    font-weight: 500;
+    color: white;
+    font-size: x-large;
+    padding: 1em 0;
+    width: 60%;
+
+    span{
+        display: flex;
+        align-items: baseline;
+        padding-top: 1em;
+        font-weight: bold;
+        font-size: initial;
+        font-style: italic;
+    }
+}
+
+.contain-load{
+    display: flex;
+    justify-content: center;
+
+    .loader {
+        border: 10px solid #f3f3f3; 
+        border-top: 10px solid #3498db;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+    }
+      
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+}
+
+.toast-container {
+    z-index: 1055;
+}
+.toast {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+  

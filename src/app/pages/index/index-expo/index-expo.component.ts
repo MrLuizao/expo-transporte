@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NavbarComponent } from "../../../components/navbar/navbar/navbar.component";
@@ -8,6 +9,8 @@ import { EventTabComponent } from "../../../components/tab/event-tab/event-tab.c
 import { PricingTwoComponent } from "../../../components/pricing/pricing-two/pricing-two.component";
 import { BlogOneComponent } from "../../../components/blog/blog-one/blog-one.component";
 import { FooterTwoComponent } from "../../../components/footer/footer-two/footer-two.component";
+import { SponsorsLineComponent } from '../../../components/sponsors-line/sponsors-line.component';
+import { RegistryService } from '../../../services/registry.service';
 
 interface EventProcess{
   icon: string;
@@ -21,6 +24,7 @@ interface EventProcess{
   standalone: true,
   imports: [
     CommonModule,
+    FormsModule,
     RouterLink,
     NavbarComponent,
     TeamOneComponent,
@@ -28,7 +32,9 @@ interface EventProcess{
     EventTabComponent,
     PricingTwoComponent,
     BlogOneComponent,
-    FooterTwoComponent
+    FooterTwoComponent,
+
+    SponsorsLineComponent,
 ],
   templateUrl: './index-expo.component.html',
   styleUrl: './index-expo.component.scss'
@@ -36,13 +42,21 @@ interface EventProcess{
 
 export class IndexExpoComponent {
 
-  countdownDate: Date = new Date('September 13, 2025 6:0:0');
+  formData = {
+    empresa: '',
+    contacto: '',
+    telefono: '',
+    email: ''
+  };
+
+  countdownDate: Date = new Date('March 14, 2025 0:0:0');
   days: number = 0
   hours: number = 0
   minutes: number =0
   seconds: number = 0
 
-  constructor() { }
+  constructor( private registryService: RegistryService) { }
+
   ngOnInit(): void {
     setInterval(() => {
       this.calculateTime();
@@ -98,6 +112,61 @@ export class IndexExpoComponent {
   togggleModal(e:any){
     e.preventDefault();
     this.isOpen = !this.isOpen;
+  }
+
+  navigateToRegistry(){
+
+    let sectionId = document.getElementById('formSection');
+    console.log(sectionId);
+
+    sectionId?.scrollIntoView({behavior: 'smooth'})
+    
+    // document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  loading = false;
+  showToast = false;
+  toastTitle = '';
+  toastMessage = '';
+
+  onSubmit() {
+    this.loading = true;
+    console.log(this.formData);
+    this.registryService.sendContactData(this.formData).subscribe(
+      (response) => {
+        console.log('Datos enviados correctamente', response);
+        this.formData = {
+          empresa: '',
+          contacto: '',
+          telefono: '',
+          email: ''
+        };
+        this.loading = false;
+
+        this.showToastMessage('Registro exitoso', 'Pronto nos pondremos en contacto');
+
+      },
+      (error) => {
+        console.error('Error al enviar los datos', error);
+        this.loading = false;
+
+        this.showToastMessage('Error', 'Error al enviar los datos');
+
+        alert('Error al enviar los datos');
+      }
+    );
+  }
+
+  showToastMessage(title: string, message: string) {
+    this.toastTitle = title;
+    this.toastMessage = message;
+    this.showToast = true;
+
+    setTimeout(() => this.hideToast(), 5000);
+  }
+
+  hideToast() {
+    this.showToast = false;
   }
 
 }
