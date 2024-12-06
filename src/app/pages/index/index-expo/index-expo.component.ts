@@ -131,7 +131,9 @@ export class IndexExpoComponent {
 
   onSubmit() {
     this.loading = true;
+    this.formData.email = this.formData.email.toLocaleLowerCase();
     console.log(this.formData);
+
     this.registryService.sendContactData(this.formData).subscribe(
       (response) => {
         console.log('Datos enviados correctamente', response);
@@ -143,16 +145,14 @@ export class IndexExpoComponent {
         };
         this.loading = false;
 
-        this.showToastMessage('Registro exitoso', 'Pronto nos pondremos en contacto');
+        this.showToastMessage('Registro exitoso', response.message);
 
       },
       (error) => {
-        console.error('Error al enviar los datos', error);
         this.loading = false;
 
-        this.showToastMessage('Error', 'Error al enviar los datos');
+        this.showToastMessage('Error', error.error.message);
 
-        alert('Error al enviar los datos');
       }
     );
   }

@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class RegistryService {
 
-  private apiUrl = 'http://localhost:3000/api/contact';
+  private apiUrl = 'https://qr-contact-api.onrender.com/api/contact'; //PROD
+  // private apiUrl = 'http://localhost:3000/api/contact'; //LOCAL NODE
 
   constructor(private http: HttpClient) { }
 
