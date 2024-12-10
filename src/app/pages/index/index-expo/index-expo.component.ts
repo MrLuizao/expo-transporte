@@ -127,6 +127,12 @@ export class IndexExpoComponent {
     },
   ]
 
+  openModalMap:any = false;
+  togggleModalMap(e:any){
+    e.preventDefault();
+    this.openModalMap = !this.openModalMap;
+  }
+
   isOpen:any = false;
 
   togggleModal(e:any){
