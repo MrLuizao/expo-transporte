@@ -1,22 +1,35 @@
-img.logo{
-    width: 70%;
-}
 
 div.info{
     font-weight: 500;
     color: white;
     font-size: x-large;
     padding: 1em 0;
-    width: 60%;
 
-    span{
-        display: flex;
-        align-items: baseline;
-        padding-top: 1em;
+    h1.descript{
+        text-align: left;
+        background: #fff;
+        color: #1065d0;
         font-weight: bold;
-        font-size: initial;
         font-style: italic;
+        padding: 1rem;
+        border-radius: 10px;
     }
+
+    small{
+        font-size: 18px;
+
+        span{
+            text-decoration: underline;
+        }
+    }
+    small:hover{
+        cursor: pointer;
+    }
+    .count{
+        font-size: 48px !important;
+        font-weight: bold !important;
+    }
+
 }
 
 .contain-load{
@@ -45,4 +58,5 @@ div.info{
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
 }
+
   

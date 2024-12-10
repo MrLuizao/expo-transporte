@@ -1,72 +1,125 @@
-<!-- <app-navbar [navLight]="true" [navRight]="true"/> -->
+<app-navbar [navLight]="true" [navRight]="true"/>
 
- <!-- Start -->
- <section class="bg-animation-left d-table w-100" style="background: url('assets/images/expo/portrait-bg.jpg') center no-repeat; background-size: cover; position: relative; padding: 5em 0;">
-    <!-- <div class="bg-overlay bg-primary opacity-7"></div> -->
+
+<section class="bg-animation-left d-table w-100" style="
+    background: url('assets/images/expo/portrait-bg.jpg') center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 2em 0;
+  ">
     <div class="container">
-        <div class="row mt-5">
+        <div class="row text-center">
             <div class="col-12">
-                <div class="title-heading position-relative" style="z-index: 2;">
-                    <img src="assets/images/expo/logo-expo.png" class="logo"/>
-                    <div class="info">
-                        Descubre innovaciones, conferencias y oportunidades de networking en el evento clave del sector.
-                        <br>
-                        <span>
-                            <svg fill="#fff" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645 c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645 C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892 c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z"></path> <path d="M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614 c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901 c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104 C179.265,127.948,165.464,141.901,148.5,141.901z"></path> </g> </g></svg>
-                            &nbsp;
-                            Centro de convenciones del Estado de México.
-                        </span>
-                    </div>
-                    <img src="assets/images/expo/date-info.png"/>
+                <!-- Logo -->
+                <div class="title-heading position-relative" style="z-index: 2; padding: 2em 0;">
+                    <img src="assets/images/expo/logo-expo.png" class="img-fluid" alt="Expo Logo"
+                        style="max-width: 350px; margin-bottom: 3em;" />
+                    <div class="info mb-4">
+                        <h1 class="descript fs-4 fs-md-2">
+                            EXPOSICIÓN QUE VINCULA A FABRICANTES, PROVEEDORES Y PROFESIONALES DEL SECTOR PARA EL INTERCAMBIO DE IDEAS, SOLUCIONES Y TECNOLOGÍA DE VANGAURDIA, GENERANDO CONCIENCIA CON EL MEDIO AMBIENTE DE NUESTRO PAÍS.
+                        </h1>
 
-                    <div class="row">
+                        <img src="assets/images/expo/date-info.png" class="img-fluid mb-3 mt-3" alt="Event Date"
+                        style="max-width: 100%;" />
+                        
+                        <div class="row justify-content-center">
+    
+
+                            <small class="fs-4 fs-md-5">
+                                <svg fill="#fff" height="20px" width="20px" version="1.1" id="Capa_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 297 297" xml:space="preserve" stroke="#fff">
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <path
+                                                d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645 c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645 C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892 c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z">
+                                            </path>
+                                            <path
+                                                d="M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614 c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901 c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104 C179.265,127.948,165.464,141.901,148.5,141.901z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <span>
+                                    Centro de convenciones del Estado de México.
+                                </span>
+                            </small>
+                        </div>
+
+                    </div>
+                    <!-- Event Date -->
+
+                    <!-- Button -->
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-6">
+                            <button
+                                type="button" 
+                                class="btn btn-success btn-success-custom w-100" 
+                                (click)="navigateToRegistry()">
+                                ASEGURA TU LUGAR AQUÍ
+                            </button>
+
+                        </div>
+                    </div>       
+
+                    <!-- Countdown -->
+                    <div class="row  mt-4">
                         <div class="col-md-12">
                             <div id="event-sale">
-                                <ul class="count-down list-unstyled m-0">
-                                    <li id="days" class="count-number fw-semibold mb-0 list-inline-item px-3">{{days}}<p class='count-head'>Days</p></li>
-                                    <li id="hours" class="count-number fw-semibold mb-0 list-inline-item px-3">{{hours}}<p class='count-head'>Hours</p></li>
-                                    <li id="mins" class="count-number fw-semibold mb-0 list-inline-item px-3">{{minutes}}<p class='count-head'>Mins</p></li>
-                                    <li id="secs" class="count-number fw-semibold mb-0 list-inline-item px-3">{{seconds}}<p class='count-head'>Secs</p></li>
-                                    <li id="end" class="h1"></li>
+                                <ul class="count-down list-unstyled m-0 d-flex justify-content-center flex-wrap">
+                                    <li id="days" class="count-number fw-semibold mb-2 list-inline-item px-3">
+                                        {{ days }}
+                                        <p class="count-head">Días</p>
+                                    </li>
+                                    <li id="hours" class="count-number fw-semibold mb-2 list-inline-item px-3">
+                                        {{ hours }}
+                                        <p class="count-head">Horas</p>
+                                    </li>
+                                    <li id="mins" class="count-number fw-semibold mb-2 list-inline-item px-3">
+                                        {{ minutes }}
+                                        <p class="count-head">Minutos</p>
+                                    </li>
+                                    <li id="secs" class="count-number fw-semibold mb-2 list-inline-item px-3">
+                                        {{ seconds }}
+                                        <p class="count-head">Segundos</p>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-
-                    <!-- <div class="mt-4 pt-2">
-                        <a [routerLink]="[]" class="btn btn-primary">ASEGURA TU LUGAR AQUÍ</a>
-                    </div> -->
-
-                    <button type="button" class="btn btn-success" (click)="navigateToRegistry()">ASEGURA TU LUGAR AQUÍ</button>
-
+             
                 </div>
-            </div><!--end col-->
-        </div><!--end row-->
-    </div><!--end container-->
-</section><!--end section-->
-<!-- End -->
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
 <app-sponsors-line></app-sponsors-line>
 <!-- <app-crypto-tagline/> -->
 
 
- <!-- Start -->
- <section class="section">
+<!-- Start -->
+<section class="section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="section-title text-center mb-4 pb-2">
                     <h4 class="title fw-semibold mb-3">Host Your Event</h4>
-                    <p class="text-muted para-desc mx-auto mb-0">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
+                    <p class="text-muted para-desc mx-auto mb-0">
+                        Descubre innovaciones, conferencias y oportunidades de networking en el evento clave del sector.
+                    </p>
                 </div>
             </div><!--end col-->
         </div><!--end row-->
 
         <div class="row">
             <div *ngFor="let item of eventProcess" class="col-md-4 mt-4 pt-2">
-                <div class="features feature-primary text-center border-0 px-lg-4 position-relative" [ngClass]="item.bar ? 'process-bar' : ''">
-                    <div class="fea-icon bg-soft rounded-circle shadow icon h5 mb-0 mx-auto"><i [class]="item.icon"></i></div>
+                <div class="features feature-primary text-center border-0 px-lg-4 position-relative"
+                    [ngClass]="item.bar ? 'process-bar' : ''">
+                    <div class="fea-icon bg-soft rounded-circle shadow icon h5 mb-0 mx-auto"><i [class]="item.icon"></i>
+                    </div>
 
                     <div class="content mt-4 pt-2">
                         <h4>{{item.title}}</h4>
@@ -82,7 +135,8 @@
             <div class="col-lg-7 col-md-8">
                 <div class="section-title text-md-start text-center mb-4 pb-2">
                     <h4 class="title fw-semibold mb-3">Keynote Speakers</h4>
-                    <p class="para-desc title-dark text-muted mb-0">Explore and learn more about everything from machine learning and global payments to  scaling your team.</p>
+                    <p class="para-desc title-dark text-muted mb-0">Explore and learn more about everything from machine
+                        learning and global payments to scaling your team.</p>
                 </div>
             </div><!--end col-->
 
@@ -95,7 +149,7 @@
     </div><!--end container-->
 
     <div class="container-fluid mt-100 mt-60">
-        <app-team-one/>
+        <app-team-one />
     </div><!--end container-->
 
     <div class="container mt-100 mt-60">
@@ -107,9 +161,14 @@
             <div class="col-lg-6 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0 order-lg-3">
                 <div class="section-title">
                     <h4 class="title fw-semibold mb-3">Starty Event management</h4>
-                    <p class="text-muted para-desc">The advantage of its Latin origin and the relative meaninglessness of Lorum Ipsum is that the text does not attract attention to itself or distract the viewer's attention from the layout.</p>
-                
-                    <blockquote class="mx-auto blockquote h6 p-0 px-4 text-muted"><i class="mdi mdi-format-quote-open mdi-48px text-muted opacity-2 d-block"></i> The man who comes back through the door in the wall will never be quite the same as the man who went out. <small class="d-block text-primary mt-3">- Starty Event</small></blockquote>
+                    <p class="text-muted para-desc">The advantage of its Latin origin and the relative meaninglessness
+                        of Lorum Ipsum is that the text does not attract attention to itself or distract the viewer's
+                        attention from the layout.</p>
+
+                    <blockquote class="mx-auto blockquote h6 p-0 px-4 text-muted"><i
+                            class="mdi mdi-format-quote-open mdi-48px text-muted opacity-2 d-block"></i> The man who
+                        comes back through the door in the wall will never be quite the same as the man who went out.
+                        <small class="d-block text-primary mt-3">- Starty Event</small></blockquote>
                 </div>
             </div><!--end col-->
 
@@ -117,7 +176,8 @@
                 <div class="row justify-content-center g-4">
                     <div *ngFor="let item of counterData" class="col-lg-12 col-md-4 col-6">
                         <div class="counter-box position-relative text-center">
-                            <h2 class="mb-0 display-6 fw-semibold title-dark mt-2"><span class="counter-value" [countUp]="item.target">3</span><span class="h4">+</span></h2>
+                            <h2 class="mb-0 display-6 fw-semibold title-dark mt-2"><span class="counter-value"
+                                    [countUp]="item.target">3</span><span class="h4">+</span></h2>
                             <small class="counter-head text-muted">{{item.title}}</small>
                         </div><!--end counter box-->
                     </div><!--end col-->
@@ -149,17 +209,21 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="mb-3">
-                                            <label class="form-label">Nombre de la empresa<span class="text-danger">*</span></label>
+                                            <label class="form-label">Nombre de la empresa<span
+                                                    class="text-danger">*</span></label>
                                             <!-- <input name="name" id="name" type="text" class="form-control" placeholder="Empresa :"> -->
-                                            <input class="form-control" id="empresa" name="empresa" [(ngModel)]="formData.empresa" required />
+                                            <input class="form-control" id="empresa" name="empresa"
+                                                [(ngModel)]="formData.empresa" required />
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="mb-3">
-                                            <label class="form-label">Persona de contacto<span class="text-danger">*</span></label>
+                                            <label class="form-label">Persona de contacto<span
+                                                    class="text-danger">*</span></label>
                                             <!-- <input name="name" id="name" type="text" class="form-control" placeholder="Nombre contacto :"> -->
-                                            <input class="form-control" id="contacto" name="contacto" [(ngModel)]="formData.contacto" required />
+                                            <input class="form-control" id="contacto" name="contacto"
+                                                [(ngModel)]="formData.contacto" required />
                                         </div>
                                     </div>
 
@@ -167,22 +231,26 @@
                                         <div class="mb-3">
                                             <label class="form-label">Teléfono<span class="text-danger">*</span></label>
                                             <!-- <input name="subject" id="subject" class="form-control" placeholder="Teléfono :"> -->
-                                            <input class="form-control" id="telefono" name="telefono" [(ngModel)]="formData.telefono" required />
+                                            <input class="form-control" id="telefono" name="telefono"
+                                                [(ngModel)]="formData.telefono" required />
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="mb-3">
-                                            <label class="form-label">Correo electrónico <span class="text-danger">*</span></label>
+                                            <label class="form-label">Correo electrónico <span
+                                                    class="text-danger">*</span></label>
                                             <!-- <input name="email" id="email" type="email" class="form-control" placeholder="Correo electrónico :"> -->
-                                            <input class="form-control" id="email" name="email" [(ngModel)]="formData.email" required />
-                                        </div> 
+                                            <input class="form-control" id="email" name="email"
+                                                [(ngModel)]="formData.email" required />
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="d-grid" *ngIf="!loading">
-                                            <button type="submit"  class="btn btn-primary" [disabled]="!contactForm.form.valid">Enviar</button>                                            
+                                            <button type="submit" class="btn btn-primary"
+                                                [disabled]="!contactForm.form.valid">Enviar</button>
                                         </div>
                                         <div class="contain-load" *ngIf="loading">
                                             <div class="loader"></div>
@@ -211,13 +279,13 @@
     </div>
 </section>
 
- <!-- Start -->
- <section class="section bg-light">
-    <app-event-tab/>
+<!-- Start -->
+<section class="section bg-light">
+    <app-event-tab />
 </section><!--end section-->
 <!-- End -->
 
- <!-- Start CTA -->
+<!-- Start CTA -->
 <section class="bg-half-170" style="background: url('assets/images/bg/busi04.jpg') center;">
     <div class="bg-overlay"></div>
     <div class="container">
@@ -247,12 +315,13 @@
                 <div class="section-title mb-4 pb-2">
                     <h6 class="text-primary">Pricing Plan</h6>
                     <h4 class="title fw-semibold mt-2 mb-3">Select a Plan Now To Get Tickets</h4>
-                    <p class="text-muted para-desc mb-0">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
+                    <p class="text-muted para-desc mb-0">Our design projects are fresh and simple and will benefit your
+                        business greatly. Learn more about our work!</p>
                 </div>
             </div><!--end col-->
         </div><!--end row-->
 
-        <app-pricing-two/>
+        <app-pricing-two />
     </div><!--end container-->
 
     <div class="container mt-100 mt-60">
@@ -260,30 +329,29 @@
             <div class="col-12">
                 <div class="section-title text-center mb-4 pb-2">
                     <h4 class="title fw-semibold mb-3">Latest Blog & News</h4>
-                    <p class="text-muted para-desc mx-auto mb-0">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
+                    <p class="text-muted para-desc mx-auto mb-0">Our design projects are fresh and simple and will
+                        benefit your business greatly. Learn more about our work!</p>
                 </div>
             </div><!--end col-->
         </div><!--end row-->
 
-        <app-blog-one/>
+        <app-blog-one />
     </div><!--end container-->
 </section><!--end section-->
 <!-- End -->;
 
-<app-footer-two/>
+<app-footer-two />
 
 <div class="modal" [ngClass]="isOpen ? 'd-block' : '' " style="background: #00000096;">
-    <div class="d-flex align-items-center justify-content-center h-100">                    
+    <div class="d-flex align-items-center justify-content-center h-100">
         <div class="position-relative">
             <div class="position-absolute top-0  translate-middle z-index-1" style="right:-30px">
-                <button type="button" class=" btn-pills btn-sm btn-light btn-close opacity-10" style="width: 20px; height: 20px;" (click)="togggleModal($event)" ></button>
+                <button type="button" class=" btn-pills btn-sm btn-light btn-close opacity-10"
+                    style="width: 20px; height: 20px;" (click)="togggleModal($event)"></button>
             </div>
-            <iframe
-                src="https://www.youtube.com/embed/S_CGed6E610"
-                frameborder="0"
+            <iframe src="https://www.youtube.com/embed/S_CGed6E610" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            ></iframe>
+                allowfullscreen></iframe>
         </div>
     </div>
 </div>

@@ -71,22 +71,42 @@ export class IndexExpoComponent {
     this.seconds = Math.floor((difference % (1000 * 60)) / 1000);
   }
 
+  // eventProcess:EventProcess[] = [
+  //   {
+  //     icon:'uil uil-ankh',
+  //     title:'Conferences',
+  //     desc:'Write a short description, that will describe Starty the title or something informational and useful.',
+  //     bar:true
+  //   },
+  //   {
+  //     icon:'uil uil-airplay',
+  //     title:'Webinars',
+  //     desc:'Write a short description, that will describe Starty the title or something informational and useful.',
+  //     bar:true
+  //   },
+  //   {
+  //     icon:'uil uil-user',
+  //     title:'Virtual Classes',
+  //     desc:'Write a short description, that will describe Starty the title or something informational and useful.',
+  //     bar:false
+  //   },
+  // ]
   eventProcess:EventProcess[] = [
     {
       icon:'uil uil-ankh',
-      title:'Conferences',
+      title:'Expositores',
       desc:'Write a short description, that will describe Starty the title or something informational and useful.',
       bar:true
     },
     {
       icon:'uil uil-airplay',
-      title:'Webinars',
+      title:'Visitantes',
       desc:'Write a short description, that will describe Starty the title or something informational and useful.',
       bar:true
     },
     {
       icon:'uil uil-user',
-      title:'Virtual Classes',
+      title:'Salas de negociación',
       desc:'Write a short description, that will describe Starty the title or something informational and useful.',
       bar:false
     },
