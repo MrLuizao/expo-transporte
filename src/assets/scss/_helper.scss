@@ -305,14 +305,17 @@
         white-space: nowrap;
     }
     .move-text {
-        animation: moveSlideshow 10s linear infinite;
+        animation: scroll-left 16s linear infinite;
     }
 }  
-@keyframes moveSlideshow {
-    100% { 
-        transform: translateX(-45%);  
+@keyframes scroll-left {
+    0% {
+      transform: translateX(0);
     }
-}
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 
 //Mover
 .mover {
